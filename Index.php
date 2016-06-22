@@ -1,10 +1,11 @@
-<!doctype html>
+
+<?php $thisPage = "Index";?>
+
+	<h1 style="text-align: center; font-size: 42"> Welcome!</h1>
+	<?php include ("Navigation.php"); ?>
 
 <html style="font-family: arial;">
-	<h1 style="text-align: center; font-size: 42"> 
-		Welcome!
-	</h1>
-	<?php $thisPage = "Index";  include ("Navigation.php"); ?>
+
 
 	<p>
 		<br>

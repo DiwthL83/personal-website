@@ -5,9 +5,9 @@
 ?>
 
 
-<h1> 
-	Articles and Commentary
-</h1>
+	<h1> 
+		Articles and Commentary
+	</h1>
 
 <br>
 <br>
@@ -17,4 +17,4 @@ Here's a collection of articles and/or commentary I've written about a variety o
 <br>
 <br>
 <br>
-<a href="http://diwthl83.omahacodeschool.com/OCS-Highlander-Article.html">Local 'Artrepreneur' Hans Bekale Speaks to Summer 2016 OCS Highlander Class</a>
+<a href="http://diwthl83.omahacodeschool.com/OCS-Highlander-Article.php">Local 'Artrepreneur' Hans Bekale Speaks to Summer 2016 OCS Highlander Class</a>
