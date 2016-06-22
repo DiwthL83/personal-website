@@ -1,7 +1,8 @@
-
-<?php $thisPage="Goals"; ?>
-<?php include("personal-website/navigation.php"); ?>
-
+<!doctype html>
+<?php 
+	$thisPage = "Goals";
+	include ("Navigation.php"); 
+?>
 
 <h1 style="text-align: center;">
 	<strong>Goals? I got goals...</strong>

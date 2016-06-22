@@ -1,9 +1,8 @@
-
-<?php $thisPage="Profiles-and-Contact"; ?>
-<?php include("personal-website/navigation.php"); ?>
-
-
 <!doctype html>
+<?php 
+	$thisPage = "Profiles-and-Contact";
+	include ("Navigation.php"); 
+?>
 
 <html>
 

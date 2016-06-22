@@ -1,6 +1,8 @@
-
-<?php $thisPage="Fav-Quotes"; ?>
-<?php include("personal-website/navigation.php"); ?>
+<!doctype html>
+<?php 
+	$thisPage = "Fav-Quotes";
+	include ("Navigation.php"); 
+?>
 
 
 <h1 style="text-align: center;">
@@ -109,3 +111,4 @@
 	"Whatever area you are exceptional in, do not look for reciprocity. Don't expect your brothers to be fair. If you do, you'll be wounded because they do not have what it is that you have in that area. Do not look for fair reciprocity...God will make it up to you, not them."
 </p>
 
+</html>

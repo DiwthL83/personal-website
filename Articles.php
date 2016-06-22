@@ -1,6 +1,8 @@
-
-<?php $thisPage="Articles"; ?>
-<?php include("personal-website/navigation.php"); ?>
+<!doctype html>
+<?php 
+	$thisPage = "Articles";
+	include ("Navigation.php"); 
+?>
 
 
 <h1> 
