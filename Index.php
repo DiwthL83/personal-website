@@ -1,16 +1,14 @@
-
-<?php $thisPage = "Index";?>
+<?php 
+	$thisPage = "Index";
+	include ("Navigation.php"); 
+?>
 
 	<h1 style="text-align: center; font-size: 42"> Welcome!</h1>
-	<?php include ("Navigation.php"); ?>
 
 <html style="font-family: arial;">
 
 
 	<p>
-		<br>
-		<br>
-		<br>
 			<?php echo "Hello! You've found your way to the page of Jerry Samuels Jr., known internationally as Geraldo Samuél."; ?> 
 		<br>
 		<br>
@@ -20,4 +18,11 @@
 		<br>
 		<br>
 	</p>
+
+
+
+<a href="https://www.facebook.com/geraldo.wangan" title = "My Facebook" target="_blank"> <img src="/Users/mrsamuels81/Code/FB-f-Logo__blue_29.ico"/> </a>
+
+<link rel="/Users/mrsamuels81/Code/FB-f-Logo__blue_29.ico"/>
+
 </html>
