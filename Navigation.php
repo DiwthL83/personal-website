@@ -1,18 +1,35 @@
-<div id="Navigation"> 
-	<p style="text-align: center;">
-		<?php if ($thisPage=="Index") { echo "Home";} 
-			else { echo '<a href="http://diwthl83.omahacodeschool.com/Index.php">Home</a>';} ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9826;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-		<?php if ($thisPage=="Articles") { echo "Articles";} 
-			else { echo '<a href="http://diwthl83.omahacodeschool.com/Articles.php">Articles</a>';} ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9826;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-		<?php if ($thisPage=="Profiles-and-Contact") { echo "Profiles | Contact";} 
-			else { echo '<a href="http://diwthl83.omahacodeschool.com/Profiles-and-Contact.php">Profiles | Contact</a>';} ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9826;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div id="left_myName">
+	<div id="Name-and-Social">
+		<p>
+			<?php echo '<a href="Index.php">Home</a>'; ?></li>
 
-		<?php if ($thisPage=="Goals") { echo "Personal Goals";} 
-			else { echo '<a href="http://diwthl83.omahacodeschool.com/Goals.php">Personal Goals</a>';} ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9826;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<?php echo '<a href="localhost:8888/personal-website/Articles.php">FB</a>'; ?>
 
-		<?php if ($thisPage=="Fav-Quotes") { echo "Favorite Quotable Quotes";} 
-			else { echo '<a href="http://diwthl83.omahacodeschool.com/Fav-Quotes.php">Favorite Quotable Quotes</a>';} ?>
-	</p>
+			<?php echo '<a href="http://diwthl83.omahacodeschool.com/Profiles-and-Contact.php">Twitter</a>'; ?>
+
+			<?php echo '<a href="http://diwthl83.omahacodeschool.com/Goals.php">Personal Goals</a>'; ?>
+		</p>
+	</div>
 </div>
+
+
+
+<div id="left_nav"> 
+	<div id="Navigation"> 
+		<ul style = "list-style: none;">
+			<p>
+				<li><?php echo '<a href="Index.php">Home</a>'; ?></li>
+
+				<li><?php echo '<a href="localhost:8888/personal-website/Articles.php">Articles</a>'; ?></li>
+
+				<li><?php echo '<a href="http://diwthl83.omahacodeschool.com/Profiles-and-Contact.php">Profiles | Contact</a>'; ?></li>
+
+				<li><?php echo '<a href="http://diwthl83.omahacodeschool.com/Goals.php">Personal Goals</a>'; ?> </li>
+
+				<li><?php echo '<a href="http://diwthl83.omahacodeschool.com/Fav-Quotes.php">Quotable Quotes</a>'; ?></li>
+			</p>
+		</ul>
+	</div>
+</div> 
