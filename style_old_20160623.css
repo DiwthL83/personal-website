@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html>
+<head>
+<style>
+
+
+.leftcol {
+  /**
+   * This container orders items according to flexbox 
+   * rules. By default, this would arrange its children
+   * horizontally. However, the next property...
+   */
+  display: flex;
+
+  /**
+   * ...sets the main axis to be vertical instead of
+   * horizontal, so now the children are laid out
+   * vertically, from top to bottom.
+   */
+  flex-direction: column;
+
+  /**
+   * It will also put as much space as possible
+   * between its children, with the children at either end
+   * laying flush against the container's edges.
+   */
+  justify-content: space-between;
+
+  height: 300px;
+  width: 150px;
+  border-right: 1px solid #D7DBDD;
+  background-color: tan;
+  padding: 10px;
+}
+
+.rightcol {
+    background-color: black;
+    color: white;
+    width: 80%;
+    height: 100%;
+    height:auto;
+    float: left;
+}
+
+
+
+  .nav_item {
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #16A2D7;
+    font-size: 12px;
+  }
+
+  .sideBar__item.is-side-bar-item-selected {
+    background-color: #EEF3F5;
+    border-radius: 4px;
+  }
+
+
+
+ul {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 0.75px;
+}
+
+
+li a {
+    display: block;
+    color: #FF4D00;
+    text-decoration: none;
+    text-indent: 0px ;
+}
+
+li a(.active) {
+    background-color: #FFD700;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #444444;
+    color: #FFD700;
+}
+
+</style>
+</head>
+</html>

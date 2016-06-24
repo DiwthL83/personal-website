@@ -1,35 +1,29 @@
+<!doctype html>
+
+<div id="Navigation"> 
 
 
-<div id="left_myName">
-	<div id="Name-and-Social">
-		<p>
-			<?php echo '<a href="Index.php">Home</a>'; ?></li>
-
-			<?php echo '<a href="localhost:8888/personal-website/Articles.php">FB</a>'; ?>
-
-			<?php echo '<a href="http://diwthl83.omahacodeschool.com/Profiles-and-Contact.php">Twitter</a>'; ?>
-
-			<?php echo '<a href="http://diwthl83.omahacodeschool.com/Goals.php">Personal Goals</a>'; ?>
-		</p>
-	</div>
-</div>
-
-
-
-<div id="left_nav"> 
-	<div id="Navigation"> 
+<!-- <div class="left_side"> -->
+ 
 		<ul style = "list-style: none;">
-			<p>
-				<li><?php echo '<a href="Index.php">Home</a>'; ?></li>
 
-				<li><?php echo '<a href="localhost:8888/personal-website/Articles.php">Articles</a>'; ?></li>
+			<li class="<?php if ($thisPage=="Index") {echo "active"; } else  {echo "noactive";}?>">
+			<a href="Index.php">Home</a></li>
 
-				<li><?php echo '<a href="http://diwthl83.omahacodeschool.com/Profiles-and-Contact.php">Profiles | Contact</a>'; ?></li>
+			<li class="<?php if ($thisPage=="Articles") {echo "active"; } else  {echo "noactive";}?>">
+			<a href="Articles.php">Articles</a></li>
 
-				<li><?php echo '<a href="http://diwthl83.omahacodeschool.com/Goals.php">Personal Goals</a>'; ?> </li>
+			<li class="<?php if ($thisPage=="Profiles-and-Contact") {echo "active"; } else  {echo "noactive";}?>">
+			<a href="Profiles-and-Contact.php">Profiles | Contact</a></li>
 
-				<li><?php echo '<a href="http://diwthl83.omahacodeschool.com/Fav-Quotes.php">Quotable Quotes</a>'; ?></li>
-			</p>
+			<li class="<?php if ($thisPage=="Goals") {echo "active"; } else  {echo "noactive";}?>">
+			<a href="Goals.php">Personal Goals</a></li>
+
+			<li class="<?php if ($thisPage=="Fav-Quotes") {echo "active"; } else  {echo "noactive";}?>">
+			<a href="Fav-Quotes.php">Quotable Quotes</a></li>
 		</ul>
-	</div>
-</div> 
+
+	<!-- </div> -->
+
+
+</div>

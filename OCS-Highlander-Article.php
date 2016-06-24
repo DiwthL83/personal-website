@@ -1,5 +1,14 @@
 <!doctype html>
-<?php $thisPage = "OCS-Highlander-Article"; include ("Article-SubNavigation.php"); ?>
+<!-- <?php $thisPage = "OCS-Highlander-Article"; include ("Article-SubNavigation.php"); ?> -->
+
+<div id="left_side">
+	<p style= "text-align: center; font-family: arial black; font-size: 26px; color: #FF4D00;">
+		Jerry Samuels, Jr.
+	<hr style= "border: 2px solid #FF4D00;">
+	</p>
+	<?php include ("Navigation.php"); ?>
+</div>
+
 
 <html>
 	<h1 style="font-family: arial; font-size: 20;">
@@ -26,3 +35,5 @@
 		Be sure to visit The Connect at http://theconnect-alpha.com to get plugged into “all things good”!
 	</body>
 </html>
+
+

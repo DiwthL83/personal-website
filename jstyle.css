@@ -7,58 +7,59 @@
 html, body {
     height: 100%;
     margin: 0;
-    outline: 1px solid;
-    font-size: 16px;
+    outline: 0px solid;
 }
 
 #left_name {
-    width: 17%;
+    width: 20%;
     height: 20%;
-    position: fixed;
+    position: static;
+    text-align: center;
     background-color: #9C7704;
     color: #19ECD1;
 }
 
 #left_nav {
-    width: 17%;
-    height: 80%;
+    width: 20%;
+    height: 100%;
     position: fixed;
     background-color: #FDE9C2;
 }
 #right {
-    width: 83%;
+    width: 80%;
     height: 100%;
     position: absolute;
-    right: 0;
+    right: 0px;
+    text-align: left; 
+    font-size: 16px;
     background-color: #D0F9C7;
     font-family: "Arial";
 }
 
 
-
 ul {
     margin: 0;
-    height: 100%;
-    padding: 0;
     background-color: #FDE9C2;
     font-family: "Arial Black", "Tahoma";
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 0.75px;
-    padding-left: opx ;
-    margin-left: opx ;
-    text-indent: opx ;
+    padding-left: 0px ;
+    padding-right: 0px;
+    margin-left: 0px ;
+    margin-top: 0px;
+    text-indent: 0px ;
 }
 
 
 li a {
     display: block;
     color: #FF4D00;
-    padding: 4px 0 4px 20px;
+    padding: 0px 0 0px 0px;
     text-decoration: none;
-    text-indent: 0px ;
+    text-indent: 40px ;
 }
 
-li a.active {
+li a(.active) {
     background-color: #FFD700;
     color: white;
 }

@@ -1,20 +1,3 @@
-
-		<header style= "font-size: 22px; font-family: arial black;">
-			Jerry Samuels, Jr. 
-			<br><br>
-		</header>
-
-		<body style="font-size: 14px; text-align: justify;">
-			<?php echo '<a href="https://www.facebook.com/geraldo.wangan">FB</a>'; ?>&nbsp;&nbsp;
-			<?php echo '<a href="https://twitter.com/GeraldoSam">Twitter</a>'; ?>&nbsp;&nbsp;
-			<?php echo '<a href="https://github.com/DiwthL83">GitHub</a>'; ?>
-		</body>
-
-
-
-
-
-
 <!doctype html>
 
 <html>
@@ -26,54 +9,30 @@ body {
     margin: 0;
 }
 
-.wrapper {
-  display: flex;
-}
-
-nav { 
-  flex: 0 0 340px;
-  background: gray;
-}
-
-.nav-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-section {
-  flex: 1 2;
-  padding: 20px;
-}
-
-
-
-
-
-
 html, body{
     height: 100%;
     margin: 0;
+    background-color: tan;
 }
 
 #left_side {
     width: 20%;
     float: left;
-    /*position: fixed;*/
+    position: fixed;
     height: 100%;
-    /*background-color: #9C7704;*/
+    background-color: #EEF0CA;
     /*color: #19ECD1;*/
 }
 
 #right_side {
     width: 80%;
-    /*height: 100%;*/
+    height: auto;
     float: left;
     position: absolute;
     right: 0px;
     text-align: left; 
     font-size: 16px;
-    background-color: tan;
+    /*background-color: tan;*/
     font-family: "Arial";
 }
 
