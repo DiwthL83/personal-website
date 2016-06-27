@@ -9,10 +9,14 @@ body {
     margin: 0;
 }
 
-html, body{
+html,body {
     height: 100%;
     margin: 0;
-    background-color: tan;
+    background-color: #DEDEDE;
+}
+
+p {
+margin: 15px;
 }
 
 #left_side {
@@ -20,7 +24,8 @@ html, body{
     float: left;
     position: fixed;
     height: 100%;
-    background-color: #EEF0CA;
+    /*background-color: #EEF0CA;*/
+    background-color: #FAEBD7;
     /*color: #19ECD1;*/
 }
 
@@ -32,7 +37,6 @@ html, body{
     right: 0px;
     text-align: left; 
     font-size: 16px;
-    /*background-color: tan;*/
     font-family: "Arial";
 }
 
@@ -40,7 +44,8 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #EEF0CA;
+    /*background-color: #EEF0CA;*/
+    background-color: #FAEBD7;
     font-family: Arial Black, Tahoma;
     font-size: 18px;
     letter-spacing: 0.75px;
