@@ -9,13 +9,7 @@
 } ?>
 
 
-<?php function Navigation_Choice() { 
-	if ($thisSection=="Articles") { 
-		echo "<?php include (\"Articles/Articles-Navigation.php\") ?>"; 
-	}
-	if ($thisSection=="Games") { 
-		echo "<?php include (\"Games/Games-Navigation.php\") ?>"; 
-	} 	
-	else { echo "<?php include (\"Navigation.php\") ?>"; } 
-}
+<?php function ()
+
+
 ?>

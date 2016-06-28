@@ -13,7 +13,7 @@
 
 			<p> I have spent the majority of my professional career in the financial services industry (mostly with a stock brokerage and briefly with an insurance company) and learned some SQL and SAS in the process. I did a lot of research on Omaha Code School and was definitely intrigued because I found myself wanting to learn more about software development, being that there's so much you can help create using such a skill set. So after a series of events, I ended up finally completing an application and going for it.</p>
 
-			<p> I find gadgets, cars, and woodworking pretty interesting. I also enjoy reading quite a bit as well. I spend a lot of time serving in youth ministry at Glad Tidings Church (<a href="http://www.gtomaha.org">www.gtomaha.org</a>), and look up Emanate Student Ministries on Facebook and Twitter!), and have been serving with a ministry for foster youth called Teen Reach Adventure Camp for the past four years. I'm looking forward to meeting all of you in person and hopefully making some new friends in the process! </p>
+			<p> I find gadgets, cars, and woodworking pretty interesting. I also enjoy reading quite a bit as well. I spend a lot of time serving in youth ministry at Glad Tidings Church (<a href="http://www.gtomaha.org">www.gtomaha.org</a>), and have been serving with a ministry for foster youth called Teen Reach Adventure Camp (TRAC for short) for the past four years. </p>
 		</div>
 	</body>
 </html>
