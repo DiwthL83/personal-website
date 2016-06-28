@@ -23,34 +23,34 @@ $thisSection=="Games"?>
 
 			//****Throw Logic start.****
 
-			// If you both throw the same thing...
+			// If we both throw the same thing...
 			if ($cyborgthrow == $playerthrow) {
-			$winlossdraw = "DRAW";
+				$winlossdraw = "DRAW";
 			$drawcount++;}
 
 			// Your paper beats rock.
 			if ($cyborgthrow == "ROCK" && $playerthrow == "PAPER") {
-			$winlossdraw = "WIN";
+				$winlossdraw = "WIN";
 			$wincount++;}
 
 			// Your scissors beats paper.
 			if ($cyborgthrow == "PAPER" && $playerthrow == "SCISSORS") {
-			$winlossdraw = "WIN";
+				$winlossdraw = "WIN";
 			$wincount++;}
 
 			// Your rock beats scissors.
 			if ($cyborgthrow == "SCISSORS" && $playerthrow == "ROCK") {
-			$winlossdraw = "WIN";
+				$winlossdraw = "WIN";
 			$wincount++;}
 
 			// Their scissors beats your paper.
 			if ($cyborgthrow == "SCISSORS" && $playerthrow == "PAPER") {
-			$winlossdraw = "LOSS";
+				$winlossdraw = "LOSS";
 			$losscount++;}
 
 			// Their paper beats your rock.
 			if ($cyborgthrow == "PAPER" && $playerthrow == "ROCK") {
-			$winlossdraw = "LOSS";
+				$winlossdraw = "LOSS";
 			$losscount++;}
 
 			// Their rock beats your scissors.
@@ -75,6 +75,8 @@ $thisSection=="Games"?>
 			$cyborgthrow = "N/A";  }
 		?>
 
+
+<!-- Have to resolve PHP code before running the section with HTML forms -->
 
 	<!-- This is the title that appears in the browser window header when you load the page. -->
 	<title>Rock. Paper. Scissors.</title>
@@ -113,7 +115,7 @@ $thisSection=="Games"?>
 
 		<!--  This form will reset the page since it's calling the original page again. This will in turn reset counts when it reloads the page. If you simply reload the browser page using your browser's button, this should not effect the game counts since the page will reference the most recent variable values. -->
 		<p>
-			<form action="rps-game-test.php"  method="get"  style="font-size: 12px; font-family:arial black;">
+			<form action="rps-game-test.php"  method="post"  style="font-size: 12px; font-family:arial black;">
 				&nbsp;&nbsp;&nbsp;<input type="submit" value="RESET STATS">
 			</form>
 		</p>
