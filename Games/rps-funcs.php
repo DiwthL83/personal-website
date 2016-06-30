@@ -1,4 +1,19 @@
 
+<?php function getWeapons() { echo "
+	    <form action=\"\" method=\"get\" style=\"\">
+			<input name=\"submitted\" type=\"hidden\" value=\"1\" />
+			<input name=\"throwcount\" type=\"hidden\" value=\"<?php echo $throwcount; ?>\" />
+			<input name=\"wincount\" type=\"hidden\" value=\"<?php echo $wincount; ?>\" />
+			<input name=\"losscount\" type=\"hidden\" value=\"<?php echo $losscount; ?>\" />
+			<input name=\"drawcount\" type=\"hidden\" value=\"<?php echo $drawcount; ?>\" />
+
+	    	<!-- Setup the buttons for the \"weapons\" avaiable! -->
+			&nbsp;&nbsp;&nbsp;<label><input type=\"submit\" name=\"playerthrow\" value=\"ROCK\"></label>
+			&nbsp;&nbsp;&nbsp;<label><input type=\"submit\" name=\"playerthrow\" value=\"PAPER\"></label>
+			&nbsp;&nbsp;&nbsp;<label><input type=\"submit\" name=\"playerthrow\" value=\"SCISSORS\"></label>
+		</form> ";
+} ?>
+
 
 
 <?php function rpsGrabCounts() {
@@ -28,7 +43,7 @@
 } ?>
 
 
-<?php function rpsThrowResult($cyborgthrow, $playerthrow, $drawcount, $wincount, $losscount, $throwcount) {
+<?php function rpsThrowResult($cyborgthrow, $playerthrow, $drawcount, $wincount, $losscount, $throwcount, $winlossdraw) {
 			//****Throw Logic start.****
 
 			// If you both throw the same thing...

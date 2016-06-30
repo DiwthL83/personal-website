@@ -55,10 +55,10 @@ $thisSection=="Games"?>
 
 			// Their rock beats your scissors.
 			if ($cyborgthrow == "ROCK" && $playerthrow == "SCISSORS") {
-			$winlossdraw = "LOSS";
+				$winlossdraw = "LOSS";
 			$losscount++;}
 
-			//****Throw logic end.****
+			//****Throw logic end.****//
 
 			// Increment up the throw count.
 			$throwcount++;

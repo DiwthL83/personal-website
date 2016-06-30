@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html>
+<head>
+<style>
+
+/* Style the TT game using the BEM convention */
+
+
+.mainPage{
+    padding: 0;
+    margin: 0;
+    /*background-color: #DEDEDE;*/
+    background-color: yellow;
+}
+
+
+/* Main background window  - desired size of the total game area is 500x300 pixels */
+.tttContainer{
+	padding: 0px;
+	margin: 0;
+	width: 275px;
+	height: 275px;
+	list-style: none;
+	background: red;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-content: center;
+
+}
+
+
+.cleanLink{
+	text-decoration: none;
+	color: black;
+}
+
+
+.tttGbox{
+	/*list-style-type: none;*/
+	text-decoration: none;
+	background: yellow;
+	/*border-color: red;*/
+	/*border-width: 2px;*/
+	padding: 0px;
+	width: 85px;
+	height: 85px;
+	margin-top: 0px;
+	margin: 2.5px;
+
+	line-height: 80px;
+	color: black;
+	font-weight: bold;
+	font-size: 55px;
+	font-family: arial black;
+	text-align: center;
+}
+
+
+/* The part of the main background window set aside for the TTT grid */
+.tttMainContainer{
+	color: orange;
+	height: 500px;
+	width: 320px;
+}
+
+/* For the flex grid of the game */
+.tttParent__grid{
+  padding: 0px;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+
+.tttParent__gridbox{
+	margin: auto;
+	height: 100px;
+	width: 100px;
+	padding: 3px;
+}
+
+
+
+
+
+</style>
+</head>
+</html>

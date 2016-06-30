@@ -2,6 +2,7 @@
 <?php $thisPage = "rps-game-test"; 
 $thisSection=="Games"?>
 <?php include("top-games.php");?>
+<?php include("rps-funcs.php");?>
 
 
 <div id="right_side"> 
@@ -55,17 +56,17 @@ $thisSection=="Games"?>
 
 			// Their rock beats your scissors.
 			if ($cyborgthrow == "ROCK" && $playerthrow == "SCISSORS") {
-			$winlossdraw = "LOSS";
+				$winlossdraw = "LOSS";
 			$losscount++;}
 
-			//****Throw logic end.****
+			//****Throw logic end.****//
 
 			// Increment up the throw count.
 			$throwcount++;
 
 			} else {
 		
-			//If the form isn't submitted (i.e., a button is not clicked), set all variables to their intial vlaues to get the game started.
+			//If the form isn't submitted (i.e., a button is not clicked), set all variables to their intial vlaues to get the game started. When the site is first loaded, it will default to these values since nothing has been submitted through the HTML form.
 			$throwcount = 0;
 			$wincount = 0;
 			$losscount = 0;
@@ -115,7 +116,7 @@ $thisSection=="Games"?>
 
 		<!--  This form will reset the page since it's calling the original page again. This will in turn reset counts when it reloads the page. If you simply reload the browser page using your browser's button, this should not effect the game counts since the page will reference the most recent variable values. -->
 		<p>
-			<form action="rps-game-test.php"  method="post"  style="font-size: 12px; font-family:arial black;">
+			<form action="rps-game-test-guinea-pig.php"  method="post"  style="font-size: 12px; font-family:arial black;">
 				&nbsp;&nbsp;&nbsp;<input type="submit" value="RESET STATS">
 			</form>
 		</p>
