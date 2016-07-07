@@ -27,11 +27,25 @@ echo "\n-------------------------------------------------------------------\n";
 
 
 
+echo "\nTesting if correctly determining a diagonal win based on three O's in a row and at least 5 turns elapsed. \n";
+if (tttWinnerEval(8, "O~~~O~~~O") == "O") {
+  echo "Success!";
+}
+else{
+  echo "Failed!";
+}
+echo "\n-------------------------------------------------------------------\n";
 
 
 
-
-
+echo "\nTesting if correctly determining a draw with full board filled in and more than 9 turns elapsed without a winner. \n";
+if (tttWinnerEval(10, "XOXOXOOXO") == "draw") {
+  echo "Success!";
+}
+else{
+  echo "Failed!";
+}
+echo "\n-------------------------------------------------------------------\n";
 
 
 
