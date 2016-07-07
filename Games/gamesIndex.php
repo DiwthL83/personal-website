@@ -1,7 +1,7 @@
 <!doctype html>
 <?php $thisPage = "gamesIndex"; ?>
 <?php $thisSection = "Games";?>
-<?php include("top-games.php");?>
+<?php include("games-top.php");?>
 
 
 		<div id="right_side"> 
@@ -14,7 +14,7 @@
 				<p style="font-size: 22px;"><b> Games to Play: </b></p>
 				<br>
 				<p><a href="rps-game-test.php">Rock Paper Scissors</a></p>
-				<p><a href="ttt-test.php">Tic Tac Toe</a></p>				
+				<p><a href="ttt-logic.php">Tic Tac Toe</a></p>				
 		</div>
 	</body>
 </html>

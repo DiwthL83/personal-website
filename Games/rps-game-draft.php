@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<?php $thisPage = "rps-game-test"; 
+<?php $thisPage = "rps-game-draft"; 
 $thisSection=="Games"?>
-<?php include("top-games.php");?>
+<?php include("games-top.php");?>
 
 
 <div id="right_side"> 
@@ -115,7 +115,7 @@ $thisSection=="Games"?>
 
 		<!--  This form will reset the page since it's calling the original page again. This will in turn reset counts when it reloads the page. If you simply reload the browser page using your browser's button, this should not effect the game counts since the page will reference the most recent variable values. -->
 		<p>
-			<form action="rps-game-test.php"  method="post"  style="font-size: 12px; font-family:arial black;">
+			<form action="rps-game-draft.php"  method="post"  style="font-size: 12px; font-family:arial black;">
 				&nbsp;&nbsp;&nbsp;<input type="submit" value="RESET STATS">
 			</form>
 		</p>

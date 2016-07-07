@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<?php $thisPage = "rps-game-test"; 
+<?php $thisPage = "rps-game-draft"; 
 $thisSection=="Games"?>
-<?php include("top-games.php");?>
+<?php include("games-top.php");?>
 <?php include("rps-funcs.php");?>
 
 
