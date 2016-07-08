@@ -5,9 +5,8 @@ function tttNewGame($p1_score, $p2_score, $draw_count){
 }
 
 
-
 // Sets Player 1 as O.
-function tttWhoIsO($whois_o){
+function tttWhoIsO($whois_o, $turn_count){
 	if ($whois_o == "" || $whois_o == "Player 2") {
 		return "Player 1";
 	} elseif ($whois_o == "Player 1") {
@@ -43,19 +42,22 @@ function tttChoicesMade ($click, $ttt_pos_str, $whose_turn){
 	return $ttt_pos_str;
 }
 
+
 // If a position on the board isn't a smiley, return its 'X or 'O'. Otherwise, return the link string to make it a smiley. 
 function tttBoardConstruct($i, $ttt_pos_str, $winner, $query){
-	if ($ttt_pos_str[$i]== "X") {
-		echo "X";
-	} elseif ($ttt_pos_str[$i] == "O") {
-		echo "O";
-	// }elseif ($winner == "no winner"){
-	} else { echo $query; }	
+	if ($ttt_pos_str[$i]== "X" && $winner == "no winner") {
+		return "X";
+	} elseif ($ttt_pos_str[$i] == "O" && $winner == "no winner") {
+		return "O";
+	} elseif (//$ttt_pos_str[$i] == "~" && 
+		($winner=="X" || $winner=="O" || $winner=="draw")) {
+		return $ttt_pos_str[$i];
+	} else { return $query; }	
 }
 
 
-// <!-- Function to pick the next turn. -->
-function tttPlayerTurn($whose_turn){
+// Function to pick the next turn.
+function tttSwitchWhoseTurn($whose_turn){
 	//Player X's turn next.
 	if ($whose_turn == "O") {
 		return "X";
@@ -94,10 +96,10 @@ function tttWinnerEval($turn_count, $ttt_pos_str){
 		($ttt_pos_str[2] . $ttt_pos_str[4] . $ttt_pos_str[6]=="OOO"))) {
 		return "O";
 	}
-	elseif ($turn_count > 9 && strpos($ttt_pos_str, "~") === false) 
+	elseif ($turn_count == 10 && 
+		strpos($ttt_pos_str, "~") === false) 
 		{ return "draw"; 
-	} else { 
-		return "no winner"; } 
+	} else { return "no winner"; } 
 }
 
 
@@ -111,15 +113,54 @@ function tttWhoWon($whose_turn, $whois_o, $whois_x){
 }
 
 
-// Msg to say whose turn it is, or if there's a winner or tie.
-function tttGameMsg($winner, $who_won){
-	if($winner=="O"){
-	echo 'We have a winner...it\'s '. $who_won . '! Congrats! Click "New Game" button below to have another go!';		
-	} 	elseif($winner=="X"){
-	echo 'We have a winner...it\'s '. $who_won . '! Congrats! Click "New Game" button below to have another go!';		
+function tttWhoWonLtr($whose_turn, $prev_turn){
+	if ($whose_turn == "X") {
+		return $prev_turn;
+	} elseif ($whose_turn == "O") {
+		return $prev_turn;
 	}
-
 }
+
+
+// Function creates $player_id variable used to communicate who is playing on a particular turn.
+function tttWhosPlayer1_2($whose_turn, $whois_o, $whois_x){
+	if ($whose_turn == "X") {
+		return $whois_x;
+	} elseif ($whose_turn == "O") {
+		return $whois_o;
+	}
+}
+
+
+// Msg to say whose turn it is, or if there's a winner or tie.
+function tttGameMsg($winner, $player_id, $whose_turn, $who_won, $prev_turn){
+	if($winner=="no winner"){
+	echo $player_id . ' (aka ' . $whose_turn . ')' . ', your turn to choose.';
+	}	elseif($winner=="O"){
+	echo 'We have a winner...it\'s '. $who_won  . ' (aka ' . $prev_turn . ')' . '! Congrats! Click "New Game" button below to have another go!';		
+	} 	elseif($winner=="X"){
+	echo 'We have a winner...it\'s '. $who_won  . ' (aka ' . $prev_turn . ')' . '! Congrats! Click "New Game" button below to have another go!';
+	} 	elseif($winner=="draw"){
+	echo 'Wow, it was a draw! Click "New Game" button below to have another go!';		
+	}	elseif($winner=="no winner"){
+
+	}
+}
+
+
+function tttScoreIncrement($game_msg, $who_won, $draw_count, $p1_score, $p2_score){
+	if(strpos($game_msg,'it was a draw!')===true && $who_won=="draw"){
+		$draw_count += 1;
+	} elseif(strpos($game_msg,'We have a winner...')===true && $who_won=="Player 1"){
+		$p1_score += 1;
+	} elseif(strpos($game_msg,'We have a winner...')===true && $who_won=="Player 2"){
+		$p2_score += 1;
+	}
+}
+
+
+
+
 
 
 ?>

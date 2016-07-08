@@ -14,11 +14,9 @@ $thisPage = "ttt-logic"; include("ttt-funcs.php");
 	$click = $_GET["click"]; // What grid box was clicked on the board.
 	$turn_count = $_GET["turn_count"]; // Number of choices made so far.
 	$whose_turn = $_GET["whose_turn"]; // Retains either an 'X' or 'O' depending on who made the choice.
-	//Grabs the current turn and makes it the last turn so once another click is performed, the
-	$prev_turn = $whose_turn;  
-	$prev_turn = $whose_turn; 
 
-print_r($whose_turn);  print_r($prev_turn);
+	// Grabs the last person that chose and makes them the prev_turn value prior to the tttSwitchWhoseTurn function running and switch the whose_turn value to whose turn it should be currently.
+	$prev_turn = $whose_turn;  
 	$whois_x = $_GET["whois_x"];
 	$whois_o = $_GET["whois_o"];
 
@@ -34,25 +32,45 @@ print_r($whose_turn);  print_r($prev_turn);
 		$turn_count = 1;
 		$whose_turn = "O";
 		$prev_turn = "X";
-		$whois_o = tttWhoIsO($whois_o);
-		$whois_x = tttWhoIsX($whois_x);
+		$whois_o = tttWhoIsO($whois_o); // Will return a value of either Player1 or Player2.
+		$whois_x = tttWhoIsX($whois_x); // Will return a value of either Player1 or Player2.
 	} else {
 		// Creates variable for most recent state of the board.
 		$ttt_pos_str = tttChoicesMade($click, $ttt_pos_str, $whose_turn); 
-		$whose_turn = tttPlayerTurn($whose_turn);
+		$whose_turn = tttSwitchWhoseTurn($whose_turn);
 		$turn_count += 1; // Increment up the number of turns taken.
 	}
 
 
 
 	// After most recent state of the TTT board is established, check to see if there's a winner present. Game won't be able to continue once winner is determined or if a tie is determined since all links will be dead at this point. Form button will always be available to reset game and stats if the players so desire.
-	$prev_player = tttWhoWon($prev_turn,$whois_x,$whois_o);
-	$winner = tttWinnerEval($ttt_pos_str, $turn_count, $whose_turn);
-	// $winner = "no winner";
-	$who_won = tttWhoWon($whose_turn, $whois_x, $whois_o);
 
-	// Display whose turn it is until a winner can be determine, in which case display who won the game, or who tied.
-	$game_msg=tttGameMsg($winner, $who_won);
+	//$prev_player = tttWhoWon($whose_turn, $whois_o, $whois_x);
+
+	// Variable holds a value of either "X", "O", "draw", or "no winner" depending on the state of the game.
+	$winner = tttWinnerEval($turn_count, $ttt_pos_str);
+
+	// This variable created in order to output correct game message. This variable is used in the tttGameMsg function.
+	$who_won = tttWhoWon($whose_turn, $whois_o, $whois_x);
+
+	// Variable is created for usage in the tttGameMsg function.
+	$player_id = tttWhosPlayer1_2($whose_turn, $whois_o, $whois_x);
+
+	// Displays whose turn it is or whether a winner or draw has been determined.
+	$game_msg=tttGameMsg($winner, $player_id, $whose_turn, $who_won, $prev_turn);
+
+	// Increments up the score at the completion of each game.
+	tttScoreIncrement($game_msg, $who_won, $draw_count, $p1_score, $p2_score);
+
+
+// echo "\n 1.    Winner var - \n". $winner;
+// echo "\n 2.     Who_won var -  \n" . $who_won;
+// echo "\n 3.     Whose_turn var - \n" . $whose_turn;
+// echo "\n 4.     Prev_turn var - \n" . $prev_turn; 
+// echo "\n 5. Prev_player var - \n" . $prev_player;
+// echo "\n 6. Whois_o var - \n" . $whois_o;
+// echo "\n 7. Whois_x var - \n" . $whois_x;
+
 
 ?>
 
@@ -64,12 +82,17 @@ print_r($whose_turn);  print_r($prev_turn);
 
 <!-- Main header of the game. -->
 	<body>
+		<div class="">
 		<h1>Tic. <br>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tac. <br>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toe.</h1>
+		</div>
 			
-
+		<div class="">
+			<p><?php echo $game_msg; ?></p>
+		</div>
 		<div>
+
 		<ul class = "tttContainer">
 	<?php
 	// Loop to display all board items. NOTE: CSS style for board gridboxes is built into the tttQueryCreate function.
@@ -82,7 +105,7 @@ print_r($whose_turn);  print_r($prev_turn);
 			$query = tttQueryCreate($i, $ttt_pos_str, $turn_count, $whose_turn, $whois_x, $whois_o, 
 				$draw_count, $p1_score, $p2_score);
 			// Call function to reconstruct TTT board.
-			tttBoardConstruct($i, $ttt_pos_str, $winner, $query); 
+			echo tttBoardConstruct($i, $ttt_pos_str, $winner, $query); 
 			?> 
 		</div> <?php  }  ?>
 
