@@ -54,7 +54,6 @@ function tttBoardConstruct($i, $ttt_pos_str, $winner, $query){
 }
 
 
-
 // <!-- Function to pick the next turn. -->
 function tttPlayerTurn($whose_turn){
 	//Player X's turn next.
@@ -95,7 +94,7 @@ function tttWinnerEval($turn_count, $ttt_pos_str){
 		($ttt_pos_str[2] . $ttt_pos_str[4] . $ttt_pos_str[6]=="OOO"))) {
 		return "O";
 	}
-	elseif ($turn_count > 9) 
+	elseif ($turn_count > 9 && strpos($ttt_pos_str, "~") === false) 
 		{ return "draw"; 
 	} else { 
 		return "no winner"; } 
