@@ -5,7 +5,7 @@
 
 
 		<div id = "right_side">
-			<p><a href="articlesIndex.php"><-- Back to Articles</a></p>
+			<p><a href="articlesIndex.php">Back to Articles</a></p>
 			<h1 style="font-family: arial; font-size: 20; text-align: center;">
 				Local 'Artrepreneur' Speaks to Summer 2016 OCS Highlander Class
 			</h1>
